@@ -1,0 +1,17 @@
+--track0:表示数,-10000,10000,0
+--track1:サイズ,0,500,34
+--track2:切り捨て値,0,2,0,1
+--dialog:フォント名,name="MS UI Gothic";装飾タイプ,mozinosousyoku=0;文字色/col,col1=0xffffff;影・縁色/col,col2=0x000000;文字ブレ防止/chk,bureboushi=0;旧仕様/chk,olddate=0;
+obj.setfont(name,obj.track1,mozinosousyoku,col1,col2)
+if obj.track2 == 0 and olddate == 0 then
+obj.load("text",math.floor(obj.track0))
+elseif obj.track2 == 1 and olddate == 0 then
+obj.load("text",string.format("%0.1f",obj.track0))
+elseif obj.track2 == 2 and olddate == 0 then
+obj.load("text",string.format("%0.2f",obj.track0))
+elseif olddate == 1 then
+obj.load("text",obj.track0)
+end
+if(bureboushi == 1) then
+obj.draw(obj.w/2,obj.h/2)
+end
