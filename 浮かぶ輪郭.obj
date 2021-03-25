@@ -1,0 +1,10 @@
+--track0:強さ,0,1000,100,0.1
+--track1:しきい値,-100,100,0,0.01
+--track2:周期,-40,40,1,0.01
+--track3:横幅,0,2000,9,1
+--dialog:ラスター/chk,laster=1;縦ラスター/chk,tatelaster=0;ランダム振幅/chk,random=1;色/col,col1=0xffffff;
+obj.load("framebuffer")
+obj.effect("エッジ抽出","color",col1,"強さ",obj.track0,"しきい値",obj.track1)
+if laster == 1 then
+obj.effect("ラスター","横幅",obj.track3,"高さ",66,"周期",obj.track2,"縦ラスター",tatelaster,"ランダム振幅",random)
+end
