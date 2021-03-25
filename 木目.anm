@@ -1,0 +1,5 @@
+--track0:強さ,0,200,13.6,0.1
+--track1:発光,0,200,13,0.1
+--dialog:シード値,seednumbar=1;
+obj.effect("ノイズ","強さ",obj.track0,"周期X",90,"周期Y",60,"type",6,"mode",1,"seed",seednumbar)
+obj.effect("発光","強さ",obj.track1)
